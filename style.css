@@ -1,0 +1,427 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4,9,30,0.7)),url("https://media.istockphoto.com/id/1055083194/photo/close-up-programmer-man-hand-typing-on-keyboard-laptop-for-register-data-system-or-access.jpg?s=612x612&w=0&k=20&c=4r6KIvWK67XsgjlfdRksuB3La9IdzZ8MQ4BOoxnPAF8=");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 16px;
+} 
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:rgb(200, 63, 63);
+    display:block;
+    margin: auto;
+}
+.nav-links ul li:hover::after{
+    width:100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.text-box h1{
+    font-size: 60px;
+}
+.text-box p{
+   margin: 10px 0 40px;
+   font-size: 16px; 
+   color: white;
+}
+.button{
+    display: inline-block;
+    color: white;
+    border: 1px solid white; 
+    padding: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.button:hover{
+    border: 1px solid rgb(0, 255, 255);
+    background:rgb(200, 63, 63);
+    transition: 1s;
+}
+nav.fa{
+    display: none;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+       display: block; 
+    }
+    .nav-links{
+        position:absolute;
+        text-align: left;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        z-index:2;
+        transition: 1.5s;
+    }
+    nav .fa{
+      display: block;
+      color: #fff;
+      margin: 14px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+
+}
+/---------next page------/
+.data{
+    width: 80%;
+    margin: auto;
+    text-align: center; 
+    padding-top: 100px;
+}
+.data h1{
+    font-size: 36px;
+    font-weight: 700;
+}
+h2{
+    font-size: 25px;
+    font-weight: 400;
+}
+.data p{
+    color: black;
+    font-size: 16px;
+    font-weight: 300px;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.rowone{
+    flex-basis: 34%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+h3{
+    text-align:center;
+    font-weight: 600px;
+    margin: 12px 0;
+}
+.rowone:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+/-----image----/
+.ResumesList{
+   width: 80%;
+   margin: auto;
+   text-align: center;
+   padding-top: 50px;
+
+}
+.r{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px; 
+ 
+}
+.R{
+   flex-basis: 32%;
+   border-radius: 10px;
+   margin-bottom: 30px;
+   position: relative;
+   overflow: hidden;
+}
+.R img{
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    display:block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0 ;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition:0.5s;
+} 
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+#resumetemplate{
+  display:none;
+}
+.myimg{
+  border: 1px solid red;
+  width:200px;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), #3551b5), url("https://png.pngtree.com/background/20220731/original/pngtree-blue-blur-background-hd-picture-image_1914175.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 90%;
+    max-width: 600px;
+
+}
+.input-group{
+    margin-bottom: 30px;  
+    position: relative;
+
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #fff;
+    color:#fff;
+    background:transparent;
+    font-size: 16px;
+}
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #fff;
+    cursor: text;
+    transition: 0.2s;
+}
+button{
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100%;
+    cursor: pointer;
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row .input-group{
+    flex-basis: 46%;
+}
+/------n/
+.head{
+    height: 100vh;
+    background-image:url("https://www.shutterstock.com/shutterstock/videos/1090269677/thumb/2.jpg?ip=x480");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.head h1{
+    text-align: center;
+    margin-bottom: 70px;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: white;
+}
+.search-field{
+    height: 37px;
+    padding: 5px;
+    border: black;
+    border-radius: 25px;
+    width: 300px;
+}
+.Jobs
+{
+    width: 400px;
+}
+.search-btn
+{
+    height: 50px;
+    width: 150px;
+    background-color: red;
+    border: black;
+    color: black;
+    border-radius: 30px;
+}
+.css{
+    background: fixed;
+}
+/------nextpg---/
+.faci{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.fali{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.fali img{
+    width: 40%;
+    border-radius: 10px;
+}
+/-----next--/
+.jobs-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+
+}
+.jobs-col:hover{
+         background: rgb(143, 127, 160);
+}
+.jobs{
+    box-shadow: 0 2px 20px rgba(110, 130, 208, 0.18);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 2px solid #357935;
+    box-sizing: border-box;
+}
+.best{
+    margin-left: 50%;
+}
+.apply-btn{
+    text-align: center; 
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.apply-btn:hover {
+    background-color: #45a049;
+}
+
+h4{
+    text-align: center;
+    color:black;
+    font-size: 30px;
+    padding: 23px;
+    margin-bottom: 0;
+}
+.dim{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.test{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.test img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.test p{
+    padding: 0;
+}
+.test h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+
+
+
+
